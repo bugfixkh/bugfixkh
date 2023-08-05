@@ -1,0 +1,24 @@
+iwctl
+[iwd]# device list
+                                    Devices
+---------------------------------------------------------------------------------
+  Name                  Address               Powered     Adapter     Mode
+---------------------------------------------------------------------------------
+wlan0             40:ec:99:76:44:9f       on             phy0          station
+
+[iwd]# station wlan0 scan
+[iwd]# station wlan0 get-networks
+		Available networks
+---------------------------------------------------------------------------------
+-
+          Network name                  Security      Signal
+---------------------------------------------------------------------------------
+-
+          nameofwifi                       psk             ****
+
+[iwd]# station wlan0 connect "nameofwifi"
+Type the network passphrase for Atlantis psk.
+Passphrase: 12345678
+
+Control + D (key) = exit from iwctl
+
